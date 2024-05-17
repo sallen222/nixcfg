@@ -12,6 +12,8 @@
     { self
     , home-manager 
     , nixos-wsl
+    , nixpkgs
+    , ...
     } @ inputs: {
     nixosModules = import ./modules { lib = nixpkgs.lib; };
     nixosConfigurations = {
@@ -22,7 +24,7 @@
           home-manager.nixosModules.home-manager
           nixos-wsl.nixosModules.default
           {
-            system.stateVersion = 24.05;
+            system.stateVersion = "23.11";
             wsl.enable = true; 
           }
         ]; 

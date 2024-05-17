@@ -1,7 +1,7 @@
-{ config, pkgs, inputs, ... };
+{ config, pkgs, inputs, ... }:
 {
   imports = with inputs.self.nixosModules; [
-    users-steveallen
+    users-steve
     editor-nvim
   ];
   
@@ -11,7 +11,7 @@
     users = import "${inputs.self}/users";
     extraSpecialArgs = {
       inherit inputs;
-    }
+    };
   };
 
   time.timeZone = "America/Philadelphia";
@@ -22,5 +22,5 @@
     git
   ];
 
-  system.stateVersion = "23.11"
+  system.stateVersion = "23.11";
 }

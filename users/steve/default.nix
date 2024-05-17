@@ -1,12 +1,12 @@
-{ config, lib, pkgs, inputs, ... }
+{ config, lib, pkgs, inputs, ... }:
 {
   home = {
     username = "steve";
     homeDirectory = "/home/steve";
     packages = with pkgs; [
-      nvim
+      vim
     ];
   };
   
-  home.stateVersion = "20.03"    
+  home.stateVersion = "20.03";    
 }
