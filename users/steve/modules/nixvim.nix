@@ -8,6 +8,8 @@
 
     plugins = {
       lualine.enable = true;
+      copilot-vim.enable = true;
+      treesitter.enable = true;
     };
 
     plugins.lsp = {
