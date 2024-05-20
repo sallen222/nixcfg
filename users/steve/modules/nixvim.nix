@@ -45,5 +45,29 @@
         }
       ];
     };
+
+    keymaps = [
+      # Telescope
+      {
+	lua = true;
+        action = ''require('telescope.builtin').find_files()'';
+	key = "<leader>ff";
+      }
+      {
+	lua = true;
+        action = ''require('telescope.builtin').live_grep()'';
+	key = "<leader>fg";
+      }
+      {
+	lua = true;
+        action = ''require('telescope.builtin').buffers()'';
+	key = "<leader>fb";
+      }
+      {
+	lua = true;
+        action = ''require('telescope.builtin').help_tags()'';
+	key = "<leader>fh";
+      }
+    ];
   };
 }
