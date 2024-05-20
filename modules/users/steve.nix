@@ -1,4 +1,4 @@
-{ config, inputs, ... }:
+{ pkgs, config, inputs, ... }:
 let
   keys = inputs.self.nixosModules.ssot-keys;
 in
@@ -7,7 +7,9 @@ in
   users.users.steve = {
     isNormalUser = true;
     extraGroups = [
-      "wheel" 
+      "wheel"
+      "docker"
     ];
+    shell = pkgs.zsh;
   };
 }

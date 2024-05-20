@@ -1,5 +1,8 @@
 { config, lib, pkgs, inputs, ... }:
 {
+  imports = [
+    ./modules/zsh.nix
+  ];
   home = {
     username = "steve";
     homeDirectory = "/home/steve";
@@ -7,6 +10,6 @@
       vim
     ];
   };
-  
+   
   home.stateVersion = "20.03";    
 }
