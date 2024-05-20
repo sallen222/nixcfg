@@ -2,7 +2,6 @@
 {
   imports = with inputs.self.nixosModules; [
     users-steve
-    editor-nvim
   ];
   
   home-manager = {
