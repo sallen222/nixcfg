@@ -5,6 +5,10 @@
     enable = true;
 
     colorschemes.gruvbox.enable = true;
+    extraPackages = with pkgs;
+      [
+        ripgrep
+      ];
 
     plugins = {
       lualine.enable = true;
@@ -49,23 +53,19 @@
     keymaps = [
       # Telescope
       {
-	lua = true;
-        action = ''require('telescope.builtin').find_files()'';
+        action = ''<cmd>lua require('telescope.builtin').find_files()<cr>'';
 	key = "<leader>ff";
       }
       {
-	lua = true;
-        action = ''require('telescope.builtin').live_grep()'';
+        action = ''<cmd>lua require('telescope.builtin').live_grep()<cr>'';
 	key = "<leader>fg";
       }
       {
-	lua = true;
-        action = ''require('telescope.builtin').buffers()'';
+        action = ''<cmd>lua require('telescope.builtin').buffers()<cr>'';
 	key = "<leader>fb";
       }
       {
-	lua = true;
-        action = ''require('telescope.builtin').help_tags()'';
+        action = ''<cmd>lua require('telescope.builtin').help_tags()<cr>'';
 	key = "<leader>fh";
       }
     ];
