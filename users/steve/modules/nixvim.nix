@@ -10,6 +10,7 @@
       lualine.enable = true;
       copilot-vim.enable = true;
       treesitter.enable = true;
+      telescope.enable = true;
     };
 
     plugins.lsp = {
@@ -17,6 +18,13 @@
       servers = { 
 	# js / ts
         tsserver.enable = true;
+	# nix
+	nil_ls.enable = true;
+	# yaml
+	yamlls.enable = true;
+	# markdown
+	marksman.enable = true;
+
       };
     };
 
