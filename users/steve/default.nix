@@ -3,6 +3,7 @@
   imports = [
     ./modules/zsh.nix
     ./modules/nixvim.nix
+    ./modules/git.nix
   ];
   home = {
     username = "steve";
